@@ -116,7 +116,7 @@ void VGenericInsert(struct VNode* start, struct VNode* mid, struct VNode* end)
     end -> prev = mid;
 }
 
-void InsertEnd(struct VList* list, int v)
+void VInsertEnd(struct VList* list, int v)
 {
     VGenericInsert(list -> head -> prev, CreateVNode(v), list -> head);
 }
@@ -270,7 +270,7 @@ void PrintGraph(struct Graph *G, char *msg)
 
     struct VNode* vrun = G->verticalList.head->next;
 
-    while(vrun != G->verticalList.head);
+    while(vrun != G->verticalList.head)
     {
         printf("[%d] <-> ",vrun -> v);
 
@@ -318,7 +318,7 @@ int main(void)
     RemoveEdge(&G,2,3);
     RemoveEdge(&G,5,6);
 
-    RemoveVertex(&G,"After removing edge (2,3) and (5,6)");
+    printf("After removing edge (2,3) and (5,6)\n");
 
     RemoveVertex(&G,3);
 
