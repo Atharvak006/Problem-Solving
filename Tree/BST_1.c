@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-// Structures 
+// Structures c
 struct BST_Node
 {
     int data;
